@@ -1,0 +1,32 @@
+# Real Estate Intelligence (Bowie, MD)
+
+Mini data pipeline + Streamlit dashboard.
+
+**Flow**
+1) `python test_run.py` ? pulls listings from Realtor (RapidAPI) using your key and saves `raw_listings.csv`
+2) `python clean.py` ? cleans & derives metrics ? outputs `clean_listings.csv`
+3) `streamlit run app.py` ? interactive dashboard
+
+## Local setup
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+
+
+
+@'
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+.venv/
+
+# Data outputs
+raw_listings.csv
+clean_listings.csv
+
+# Local environment variables
+.env
